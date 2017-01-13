@@ -2,6 +2,24 @@ FCMNotificationHandler
 ===============================
 Android library to construct and fire system tray notifications from FCM Notification messages when the app is in foreground, mimicking the default format and behavior applied when the app is background.
 
+Download
+--------
+Step 1. Add the JitPack repository in your root build.gradle at the end of repositories:
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+Step 2. Add the dependency
+```groovy
+dependencies {
+        compile 'com.github.franmontiel:FcmNotificationHandler:1.0'
+
+}
+```
 Usage
 -----
 Just add the following line in the `onMessageReceived` method of your `FirebaseMessagingService` and a system notification will be shown as if the FCM message were received when the app was in background:
@@ -22,7 +40,7 @@ Take into account that if your FCM message does not have any notification inform
 
 License
 -------
-    Copyright 2017 Francisco José Montiel Navarro
+    Copyright (C) 2017 Francisco José Montiel Navarro
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
