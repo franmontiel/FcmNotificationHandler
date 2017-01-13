@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FcmNotificationHandler</string>
+    <string name="main_activity">Main Activity</string>
+    <string name="notification_opened_activity">Notification Opened Activity</string>
+</resources>
