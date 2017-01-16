@@ -31,7 +31,6 @@ You can also just map the FCM Notification to a system notification with:
 new RemoteMessageToNotificationMapper(getApplicationContext()).map(remoteMessage);
 ```
 or map it to a notification builder with:
-You can also just map the FCM Notification to a system notification with:
 ```java
 new RemoteMessageToNotificationMapper(getApplicationContext()).mapToNotificationBuilder(remoteMessage);
 ```
