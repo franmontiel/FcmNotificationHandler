@@ -1,6 +1,6 @@
 FCMNotificationHandler
 ===============================
-Android library that helps to construct and launch system tray notifications from FCM Notification messages received when the app is in foreground, mimicking the default format and behavior applied when the app is background.
+Android library that helps to construct and launch system tray notifications from FCM Notification messages received when the app is in foreground mimicking the default format and behavior applied when the app is background.
 
 Download
 --------
