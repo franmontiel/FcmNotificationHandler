@@ -1,6 +1,6 @@
 FCMNotificationHandler
 ===============================
-Android library to construct and fire system tray notifications from FCM Notification messages when the app is in foreground, mimicking the default format and behavior applied when the app is background.
+Android library that helps to construct and launch system tray notifications from FCM Notification messages received when the app is in foreground, mimicking the default format and behavior applied when the app is background.
 
 Download
 --------
@@ -17,7 +17,6 @@ Step 2. Add the dependency
 ```groovy
 dependencies {
         compile 'com.github.franmontiel:FcmNotificationHandler:1.0'
-
 }
 ```
 Usage
@@ -36,7 +35,7 @@ You can also just map the FCM Notification to a system notification with:
 ```java
 new RemoteMessageToNotificationMapper(getApplicationContext()).mapToNotificationBuilder(remoteMessage);
 ```
-Take into account that if your FCM message does not have any notification information (is a Data only message) an `IllegalArgumentException` will be thrown when calling any of the previous described methods.
+Take into account that if your FCM message does not have any notification information (is a Data only message) an `IllegalArgumentException` will be thrown when calling any of the previously described methods.
 
 License
 -------
