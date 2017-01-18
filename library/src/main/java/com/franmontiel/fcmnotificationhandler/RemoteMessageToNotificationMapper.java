@@ -170,12 +170,11 @@ public class RemoteMessageToNotificationMapper {
                 color = Color.parseColor(notificationColor);
             } catch (IllegalArgumentException ignore) {
             }
-
-            if (color == null) {
-                int colorResId = getResourceIdFromApplicationMetadata("com.google.firebase.messaging.default_notification_color");
-                if (colorResId != 0)
-                    color = ContextCompat.getColor(context, colorResId);
-            }
+        }
+        if (color == null) {
+            int colorResId = getResourceIdFromApplicationMetadata("com.google.firebase.messaging.default_notification_color");
+            if (colorResId != 0)
+                color = ContextCompat.getColor(context, colorResId);
         }
         return color;
     }
@@ -192,13 +191,6 @@ public class RemoteMessageToNotificationMapper {
             e.printStackTrace();
         }
         return resourceId;
-    }
-
-    private int getApplicationAccentColor() {
-        TypedArray typedArray = context.obtainStyledAttributes(context.getApplicationInfo().theme, new int[]{R.attr.colorAccent});
-        int color = typedArray.getColor(0, 0);
-        typedArray.recycle();
-        return color;
     }
 
     private PendingIntent createNotificationPendingItent(RemoteMessage remoteMessage) {
