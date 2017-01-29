@@ -68,9 +68,11 @@ public class RemoteMessageToNotificationMapper {
         if (fcmNotification == null)
             throw new IllegalArgumentException(ErrorMessages.NO_NOTIFICATION_MSG);
 
+        String body = parseBody(fcmNotification);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
         builder.setContentTitle(parseTitle(fcmNotification))
-                .setContentText(parseBody(fcmNotification))
+                .setContentText(body)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(body))
                 .setSmallIcon(parseIcon(fcmNotification))
                 .setAutoCancel(true);
 

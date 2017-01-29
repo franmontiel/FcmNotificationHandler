@@ -1,6 +1,10 @@
 Change Log
 ==========
 
+Version 1.0.2 *(2017-01-29)*
+----------------------------
+ * Added support for large body text.
+
 Version 1.0.1 *(2017-01-18)*
 ----------------------------
  * Fix: The default Manifest color now is used when there is no color defined in the notification.
