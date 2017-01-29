@@ -16,7 +16,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-        compile 'com.github.franmontiel:FcmNotificationHandler:1.0.1'
+        compile 'com.github.franmontiel:FcmNotificationHandler:1.0.2'
 }
 ```
 Usage
